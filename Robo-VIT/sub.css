@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family:'Poppins',sans-serif,'Rancho', cursive,'Dancing Script', cursive'Roboto Mono', monospace;
+}
+body{
+    font-family:'Poppins',sans-serif;
+    background: linear-gradient(#19338a,#e9ebf1);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+#box{
+    display: block;
+    background: linear-gradient(#162f80,#fff);
+    overflow-x: hidden;
+    margin:60px;
+    margin-top: 25px;
+    border-radius: 40px;
+    box-shadow: -10px 60px 80px rgb(51, 34, 90);
+}
+header{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    object-fit:cover;
+}
+header .logo{
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header .logo:hover{
+    color: transparent;
+    transition: 0.5s;
+    -webkit-text-stroke: 0.5px #fff;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+}
+header ul li a:hover, 
+header ul li a.main
+{ 
+    background: white;
+    color: #2b1055;
+    transition: 0.3s;
+}
+section{
+    position: relative;
+    width: 100%;
+    height:100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height:100px;
+    background: linear-gradient(to top, white, transparent);
+    z-index: 1000;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    object-fit:contain;
+    pointer-events: none;   /* made clicking available */
+}
+section #moon{
+    mix-blend-mode: screen;
+}
+section #mb{
+    z-index: 8;
+}
+section #robo{
+    z-index: 10;
+}
+section #gr{
+    z-index: 9;
+}
+section #social{
+    position: absolute;
+    float:right;
+    top:300px;
+    right: -50px;
+    width: 70px;
+    padding: 30px 100px;
+    z-index: 1000;
+}
+section #social img{
+    width:40px;
+    float:right;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    pointer-events:visible;
+    transition: 0.3s;
+}
+section #social img:hover{
+    width:60px;
+}
+#text{
+    position: absolute;
+    color: white;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 7;
+    top:40%;
+    text-shadow: 1px 1px 8px black;
+}
+#text span{
+    font-size: 0.20em;
+    letter-spacing: 2px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: white;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 11;
+    transform: translateY(100px);
+}
+#btn:hover{
+    transition: 0.3s;
+    background: #2b1055;
+    color: white;
+}
+#content{
+    background: white;
+    /* overflow-x: hidden;
+    margin:60px;
+    margin-top: 25px;
+    border-radius: 40px;
+    box-shadow: -10px 60px 80px rgb(51, 34, 90); */
+}
+#explore{
+    padding:20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+#robo2{
+    width: 400px;
+    position: absolute;
+    top:110%;
+    left: 70%;
+    animation: float 4s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+#oval{
+    width:200px;
+    position: relative;
+    float: right;
+    margin-right: 70px;
+    margin-top: 40px;
+    height: 100px;
+    background: grey;
+    border-radius: 100px/50px;
+    opacity: 0.2;
+    animation: size 4s ease-in-out infinite;
+}
+@keyframes size{
+    0%{
+        width:200px;
+        height: 100px;
+        margin-right: 70px;
+        margin-top: 40px;
+        border-radius: 100px/50px;
+    }
+    50%{
+        width:100px;
+        height: 50px;
+        margin-right: 140px;
+        margin-top: 80px;
+        border-radius: 200px/100px;
+    }
+    100%{
+        width:200px;
+        height: 100px;
+        margin-right: 70px;
+        margin-top: 40px;
+        border-radius: 100px/50px;
+    }
+}
+#t{
+    position: relative;
+    font-size: 4vw;
+    color: white;
+    -webkit-text-stroke:2px black;
+}
+#t::before{
+    position: absolute;
+    content: attr(data-text);
+    width:0;
+    height: 100%;
+    color: black;
+    -webkit-text-stroke: 0px;
+    border-right:2px solid black;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 320px;
+    }
+}
+#explore #poster{
+    position:relative;
+    float: left;
+    width: 500px;
+    box-shadow: 3px 3px 8px black;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+#p1{
+    margin-top: 200px;
+}
+#vision{
+    display: block;
+    height:210px;
+    width:700px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: -3px 3px 20px rgb(51, 34, 90);
+    margin-left: 600px;
+    margin-top: 200px;
+    position: absolute;
+}
+#head{
+    width:500px;
+    opacity: 0.2;
+    position:relative;
+    float: left;
+    margin-top: 240px;
+    margin-right: 100px;
+    /* animation:float 4s linear infinite; */
+}
+#p2{
+    margin-top: 950px;
+    position:relative;
+}
+#p3{
+    margin-top: 200px;
+    height:700px;
+    position:relative;
+}
+#robo3{
+    float:right;
+    width:700px;
+    position:relative;
+}
+#p3 p{
+    margin-left: 30px;
+    position:relative;
+}
+#robo4{
+    width:500px;
+    position:relative;
+    float: left;
+    margin-right: 100px;
+}
+#p4{
+    margin-top: 100px;
+    position:relative;
+}
+#p4 p{
+    margin-top:-100px;
+}
+.btn2{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #2b1055;
+    color: white;
+    font-size: 1em;
+    margin-left: 50px;
+}
+.btn2:hover{
+    transition: 0.3s;
+    background: rgb(101, 101, 206);
+    color: white;
+}
+#robo5{
+    width:300px;
+    margin-right: -200px;
+    position: relative;
+    float: right;
+}
+#p5{
+    margin-top: 200px;
+    position:relative;
+    margin-bottom: 330px;
+}
+.btn3{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #2b1055;
+    color: white;
+    font-size: 1em;
+    margin-left: 200px;
+}
+.btn3:hover{
+    transition: 0.3s;
+    background: rgb(101, 101, 206);
+    color: white;
+}
+#p6{
+    margin-top: 200px;
+}
+#event{
+    width:100%;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* #image{
+    width:600px;
+    display:block;
+    border-width: 2px;
+    border-color: white;
+    background-color: black;
+} */
+#table{
+    width: 600px;
+    margin-top:100px;
+    align-items: center;
+    justify-content: center;
+    box-shadow:2px 2px 4px 2px black;
+}
+@media (max-width:800px){
+    #box{
+        overflow-x: hidden;
+        margin: 10px;
+        max-width:100%;
+    }
+    header{
+        z-index: 1001;
+        display: flex;
+        text-align: left;
+        justify-content: left;
+    }
+    header ul{
+        overflow-x: hidden;
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        background: steelblue;
+        display: flex;
+        text-align: left;
+        justify-content: left;
+        padding: min(30vh,10rem) 2em ;
+        background: hsl(0 0% 100% / 0.1);
+        margin-left: 0;
+        backdrop-filter: blur(1rem);
+    }
+    header ul li{
+        margin-bottom: 20px;
+    }
+    #poster{
+        float:left;
+        margin-left:-40px;
+    }
+    #vision{
+        max-width:300px;
+        float:left;
+        margin-top: 300px;
+        position: absolute;
+        margin-left: -20px;
+        height: 500px;
+    }
+    #vision p {
+        float:left;
+        position: absolute;
+    }
+    #robo2{
+        width: 100px;
+    }
+}
+
+
